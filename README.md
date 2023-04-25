@@ -2,7 +2,7 @@
 
 ### Задание 1
 
-1. Установка Jenkins по инструкции из лекции.
+1. Установим **Jenkins** и **Java Runtime Environment**.
 2. Создал новый репозиторий **assignment** c файлом **README.md**
 3. Склонировал репозиторий **assignment** к себе на локальную ВМ
 4. Перешел в каталог с клоном репозитория assignment
@@ -19,7 +19,12 @@
 #### Ссылка на коммит [**5c7d27d**](https://github.com/mityaevg/assignment/commit/5c7d27dfaa00fbf02e29cced5a6ab5a5c060df27) 
 
 ```
-bash commands
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt update
+sudo apt install jenkins
+sudo apt update
+sudo apt install openjdk-11-jre
 
 ```
 <kbd>![1-Регистрация аккаунта на Github](img/github_profile_overview.png)`</kbd>
@@ -60,7 +65,7 @@ mityaevg@debian-11:~/8-03-hw/assignment$ git push origin main
 
 ```
 
-<kbd>![1-Создание .gitignore и проверка статуса файла](img/2_01_gitignore.png)</kbd>
+<kbd>![1-Информация о версии Java](img/8_02_1_java_version.png)</kbd>
 
 <kbd>![2-Настройка .gitignore](img/2_03_gitignore_config.png)</kbd>
 
