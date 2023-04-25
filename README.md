@@ -23,11 +23,14 @@ sudo apt update
 sudo apt install jenkins
 sudo apt update
 sudo apt install openjdk-11-jre
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
 
 ```
 <kbd>![1-Версия Java](img/8-02_1_java_version.png)</kbd>
 
-<kbd>![2-Создание репозитория](img/repo_assignment1_creation.png)</kbd>
+<kbd>![2-Статус Jenkins.Service](img/8-02_2_jenkins_service_status.png)</kbd>
 
 <kbd>![3-4-Клонирование репозитория](img/assignment1_repo_clone.png)</kbd>
 
