@@ -2,7 +2,7 @@
 
 ### Задание 1
 
-1. Зарегистрировал аккаунт на **github.com**
+1. Установка Jenkins по инструкции из лекции.
 2. Создал новый репозиторий **assignment** c файлом **README.md**
 3. Склонировал репозиторий **assignment** к себе на локальную ВМ
 4. Перешел в каталог с клоном репозитория assignment
@@ -19,19 +19,7 @@
 #### Ссылка на коммит [**5c7d27d**](https://github.com/mityaevg/assignment/commit/5c7d27dfaa00fbf02e29cced5a6ab5a5c060df27) 
 
 ```
-mityaevg@debian-11:~/8-03-hw$ git clone https://github.com/mityaevg/assignment1.git
-mityaevg@debian-11:~/8-03-hw$ cd assignment1
-mityaevg@debian-11:~/8-03-hw/assignment1$ ls -la
-mityaevg@debian-11:~/8-03-hw/assignment1$ git config --global user.name "Grigoriy Mityaev"
-mityaevg@debian-11:~/8-03-hw/assignment1$ git config --global user.email gmitiaev@yandex.ru
-mityaevg@debian-11:~/8-03-hw/assignment1$ git status
-mityaevg@debian-11:~/8-03-hw/assignment1$ git diff
-mityaevg@debian-11:~/8-03-hw/assignment1$ git diff --staged
-mityaevg@debian-11:~/8-03-hw/assignment1$ git add README.md
-mityaevg@debian-11:~/8-03-hw/assignment1$ git diff
-mityaevg@debian-11:~/8-03-hw/assignment1$ git diff --staged
-mityaevg@debian-11:~/8-03-hw/assignment1$ git commit -m "first commit"
-mityaevg@debian-11:~/8-03-hw/assignment1$ git push origin main
+bash commands
 
 ```
 <kbd>![1-Регистрация аккаунта на Github](img/github_profile_overview.png)`</kbd>
