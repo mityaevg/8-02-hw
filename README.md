@@ -3,18 +3,9 @@
 ### Задание 1
 
 1. Установим **Jenkins** и **Java Runtime Environment**.
-2. Создал новый репозиторий **assignment** c файлом **README.md**
+2. Инсталлируем **Go** на виртуальную машину с **Jenkins**.
 3. Склонировал репозиторий **assignment** к себе на локальную ВМ
 4. Перешел в каталог с клоном репозитория assignment
-5. Произвел первоначальную настройку Git с указанием моих ФИ и адреса эл.почты
-6. Выполнил команду git status
-7. Отредактировал файл **README.md**, добавив **шаг 1**
-8. Cтатус файла изменился на **modified**, добавил строки **шаг 2**, **шаг 3**,**шаг 4**
-9. Просмотр изменений с помощью команды **git diff** и **get diff --staged**
-10. Добавляем файл **README.md** из репозитория **assignment** в коммит командой **git add README.md**
-11. Снова выполняем команды **git diff** и **git diff --staged**
-12. Создаем коммит с комментарием **git commit -m "first commit"**
-13. Пушим внесенные изменения в глобальный репозиторий **assignment** в ветку main на **Github**. 
 
 ```
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
@@ -26,13 +17,19 @@ sudo apt install openjdk-11-jre
 sudo systemctl enable jenkins
 sudo systemctl start jenkins
 sudo systemctl status jenkins
+wget https://go.dev/dl/go1.20.3.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go
+sudo tar -C /usr/local -xzf go1.20.3.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+source $HOME/.profile
+go version
 
 ```
 <kbd>![1-Версия Java](img/8-02_1_java_version.png)</kbd>
 
 <kbd>![2-Статус Jenkins.Service](img/8-02_2_jenkins_service_status.png)</kbd>
 
-<kbd>![3-4-Клонирование репозитория](img/assignment1_repo_clone.png)</kbd>
+<kbd>![3-Версия Go](img/8-02_3_go_version.png)</kbd>
 
 <kbd>![5-Первоначальная настройка Git](img/itinitial_repo_assignment1_config.png)</kbd>
 
