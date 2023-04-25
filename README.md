@@ -16,8 +16,6 @@
 12. Создаем коммит с комментарием **git commit -m "first commit"**
 13. Пушим внесенные изменения в глобальный репозиторий **assignment** в ветку main на **Github**. 
 
-#### Ссылка на коммит [**5c7d27d**](https://github.com/mityaevg/assignment/commit/5c7d27dfaa00fbf02e29cced5a6ab5a5c060df27) 
-
 ```
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
@@ -27,7 +25,7 @@ sudo apt update
 sudo apt install openjdk-11-jre
 
 ```
-<kbd>![1-Регистрация аккаунта на Github](img/github_profile_overview.png)`</kbd>
+<kbd>![1-Версия Java](img/8-02_1_java_version.png)</kbd>
 
 <kbd>![2-Создание репозитория](img/repo_assignment1_creation.png)</kbd>
 
