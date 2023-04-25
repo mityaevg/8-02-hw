@@ -25,7 +25,6 @@ source $HOME/.profile
 go version
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 sudo usermod -aG docker jenkins
-
 ```
 <kbd>![1-Версия Java](img/8-02_1_java_version.png)</kbd>
 
@@ -33,21 +32,24 @@ sudo usermod -aG docker jenkins
 
 <kbd>![3-Версия Go](img/8-02_3_go_version.png)</kbd>
 
-<kbd>![5-Первоначальная настройка Git](img/itinitial_repo_assignment1_config.png)</kbd>
+<kbd>![4-Logon Screen Jenkins](img/8-02_4_unlock_jenkins.png)</kbd>
 
-<kbd>![6-Результат выполнения команды git status](img/git_status_beginning.png)</kbd>
+<kbd>![6-Jenkins admin пароль](img/8-02_5_jenkins_admin_password.png)</kbd>
 
-<kbd>![7-Редактирование README.md](img/README.md_step1_added.png)</kbd>
+<kbd>![7-Freestyle project конфигурация 1](img/8-02_6_freestyle_project_config1.png)</kbd>
 
-<kbd>![8-Повторное выполнение git status](img/git_status_modified.png)</kbd>
+<kbd>![8-Freestyle project конфигурация 2](img/8-02_6_freestyle_project_config2.png)</kbd>
 
-<kbd>![9-Результат git diff](img/git_diff_staged.png)</kbd>
+<kbd>![9-Freestyle project конфигурация 3](img/8-02_6_freestyle_project_config3.png)</kbd>
 
-<kbd>![11-Еще раз выполняем git diff и git diff --staged](img/git_diff_staged_end.png)</kbd>
+<kbd>![10-Freestyle project конфигурация 4](img/8-02_6_freestyle_project_config4.png)</kbd>
 
-<kbd>![12-Создание коммита](img/first_commit_created.png)</kbd>
+<kbd>![11-Freestyle project конфигурация 5](img/8-02_6_freestyle_project_config5.png)</kbd>
 
-<kbd>![13-Пуш коммита в глобальный репозиторий](img/git_push_origin_main.png)
+<kbd>![12-Результаты сборки 1](img/8-02_build_2_results1.png)</kbd>
+
+<kbd>![13-Результаты сборки 2](img/8-02_build_2_results2.png)</kbd>
+
 ---
 
 ### Задание 2
