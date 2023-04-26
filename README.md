@@ -4,8 +4,8 @@
 
 1. Установим **Jenkins** и **Java Runtime Environment**.
 2. Инсталлируем **Go** на виртуальную машину с **Jenkins**.
-3. Склонировал репозиторий **assignment** к себе на локальную ВМ
-4. Перешел в каталог с клоном репозитория assignment
+3. Сделал форк репозитория - [SDVPS-Materials](https://github.com/mityaevg/sdvps-materials.git) к себе в **Github**.
+4. Создал `Freestyle Project` в **Jenkins** - **assignment1** и произвел запуск `go test .` и `docker build .`.
 
 ```
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
@@ -25,6 +25,7 @@ source $HOME/.profile
 go version
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 sudo usermod -aG docker jenkins
+sudo systemctl restart jenkins.service
 ```
 <kbd>![1-Версия Java](img/8-02_1_java_version.png)</kbd>
 
@@ -54,7 +55,7 @@ sudo usermod -aG docker jenkins
 
 ### Задание 2
 
-1. Создал файл **.gitignore** и проверил его статус сразу после создания.
+1. Создал новый проект .
 2. Добавим **.gitignore** 
 3. Пропишем игнорирование файлов с расширением **.pyc** и всех файлов в директории **cache**
 4. Создадим коммит и сделаем пуш в глобальный репозиторий.
