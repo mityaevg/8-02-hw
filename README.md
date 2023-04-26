@@ -55,10 +55,28 @@ sudo systemctl restart jenkins.service
 
 ### Задание 2
 
-1. Создал новый проект .
-2. Добавим **.gitignore** 
-3. Пропишем игнорирование файлов с расширением **.pyc** и всех файлов в директории **cache**
-4. Создадим коммит и сделаем пуш в глобальный репозиторий.
+1. Создал новый проект `Pipeline`в **Jenkins**.
+2. Переписал сборку из **assignment1** в виде кода:
+```
+pipeline {
+ agent any
+ stages {
+  stage('Git') {
+   steps {git 'https://github.com/mityaevg/sdvps-materials.git'}
+  }
+  stage('Test') {
+   steps {
+    sh '/usr/local/go/bin/go test .'
+   }
+  }
+  stage('Build') {
+   steps {
+    sh 'docker build . -t ubuntu-bionic:8082/hello-world:v$BUILD_NUMBER'
+   }
+  }
+ }
+}
+```
 
 ```
 mityaevg@debian-11:~/8-03-hw/assignment$ touch .gitignore
