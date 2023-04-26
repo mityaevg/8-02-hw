@@ -83,9 +83,7 @@ pipeline {
 
 <kbd>![Настройки задания](img/8_02_2_assignment2_config2.png)</kbd>
 
-<kbd>![3-Создание коммита и пуш в глобальный репозиторий](img/2_03_commit_created_pushed.png)
-
-#### Ссылка на коммит [**9e45964**](https://github.com/mityaevg/assignment/commit/9e45964aaecebf3d3e6b6d51c35aa954a682bf41)
+<kbd>![Результат выполнения сборки](img/8_02_2_assignment2_build_results.png)</kbd>
 
 ---
 
