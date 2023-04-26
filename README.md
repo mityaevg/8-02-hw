@@ -77,18 +77,11 @@ pipeline {
  }
 }
 ```
+Скриншоты с настройками **assignment2** и результатами выполнения сборки:
 
-```
-mityaevg@debian-11:~/8-03-hw/assignment$ touch .gitignore
-mityaevg@debian-11:~/8-03-hw/assignment$ git status
-mityaevg@debian-11:~/8-03-hw/assignment$ git commit -a -m ".gitignore created and set to ignore .pyc file and contents of cache folder"
-mityaevg@debian-11:~/8-03-hw/assignment$ git push origin main
+<kbd>![Настройки задания](img/8_02_2_assignment2_config1.png)</kbd>
 
-```
-
-<kbd>![1-Информация о версии Java](img/8_02_1_java_version.png)</kbd>
-
-<kbd>![2-Настройка .gitignore](img/2_03_gitignore_config.png)</kbd>
+<kbd>![Настройки задания](img/8_02_2_assignment2_config2.png)</kbd>
 
 <kbd>![3-Создание коммита и пуш в глобальный репозиторий](img/2_03_commit_created_pushed.png)
 
