@@ -89,7 +89,7 @@ pipeline {
 
 ### Задание 3
 
-1. Установка **Nexus** на виртуальную машину ...
+1. Установим **Nexus** на виртуальную машину.
 2. Создал файл **test.sh** c тестовым наполнением.
 3. Добавил еще несколько строк в **test.sh**. Создал коммит после добавления каждой строки и сделал пуш 
    каждого коммита в глобальный репозиторий **assigment** в ветку **test**.
@@ -98,18 +98,12 @@ pipeline {
 #### Ссылка на graph коммитов [**assignment**](https://github.com/mityaevg/assignment/network)
 
 ```
-mityaevg@debian-11:~/8-03-hw/assignment$ git checkout -b test
-mityaevg@debian-11:~/8-03-hw/assignment$ git commit -a -m "test.sh, commit1"
-mityaevg@debian-11:~/8-03-hw/assignment$ git commit -a -m "test.sh, commit2"
-mityaevg@debian-11:~/8-03-hw/assignment$ git commit -a -m "test.sh, commit3"
-mityaevg@debian-11:~/8-03-hw/assignment$ git checkout main
-mityaevg@debian-11:~/8-03-hw/assignment$ git merge test
-mityaevg@debian-11:~/8-03-hw/assignment$ git commit -a -m "test.sh, all commits merged and pushed to origin main"
-mityaevg@debian-11:~/8-03-hw/assignment$ git push origin main
-
+sudo docker run -d -p 192.168.1.121:8081:8081 -p 192.168.1.121:8082:8082 --name nexus -e INSTALL4J_ADD_VM_PARAMS="-Xms512m -Xmx512m -XX:MaxDirectMemorySize=273m" sonatype/nexus3
+sudo docker exec -t nexus bash -c 'cat /nexus-data/admin.password && echo'
+sudo docker container restart 11879005e34f
 ```
 
-<kbd>![1-Создали и переключились на ветку test](img/3_01_test_branch_created.png)</kbd>
+<kbd>![1-Nexus веб-интерфейс](img/8-02_3_nexus_web_interface.png)</kbd>
 
 <kbd>![2-Создали test.sh](img/3_02_test.sh_created.png)</kbd>
 
