@@ -90,7 +90,7 @@ pipeline {
 ### Задание 3
 
 1. Установим **Nexus** на виртуальную машину.
-2. Создал файл **test.sh** c тестовым наполнением.
+2. Cоздал `raw (hosted)` репозиторий **assignment3_repo** в **Nexus**.
 3. Добавил еще несколько строк в **test.sh**. Создал коммит после добавления каждой строки и сделал пуш 
    каждого коммита в глобальный репозиторий **assigment** в ветку **test**.
 4. Переключимся обратно на ветку **main**. Производим слияние веток **main** и **test**.
@@ -105,7 +105,7 @@ sudo docker container restart 11879005e34f
 
 <kbd>![1-Nexus веб-интерфейс](img/8-02_3_nexus_web_interface.png)</kbd>
 
-<kbd>![2-Создали test.sh](img/3_02_test.sh_created.png)</kbd>
+<kbd>![2-Создание репозитория assignment3_repo](img/8-02_3_raw_hosted_repo.png)</kbd>
 
 <kbd>![3-Подтверждение создания test.sh](img/3_02_test.sh_created_1.png)</kbd>
 
