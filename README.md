@@ -91,8 +91,7 @@ pipeline {
 
 1. Установим **Nexus** на виртуальную машину.
 2. Cоздал `raw (hosted)` репозиторий **assignment3_repo** в **Nexus**.
-3. Добавил еще несколько строк в **test.sh**. Создал коммит после добавления каждой строки и сделал пуш 
-   каждого коммита в глобальный репозиторий **assigment** в ветку **test**.
+3. 
 4. Переключимся обратно на ветку **main**. Производим слияние веток **main** и **test**.
 
 #### Ссылка на graph коммитов [**assignment**](https://github.com/mityaevg/assignment/network)
@@ -107,12 +106,3 @@ sudo docker container restart 11879005e34f
 
 <kbd>![2-Создание репозитория assignment3_repo](img/8-02_3_raw_hosted_repo.png)</kbd>
 
-<kbd>![3-Подтверждение создания test.sh](img/3_02_test.sh_created_1.png)</kbd>
-
-<kbd>![4-Добавление строк в test.sh](img/3_03_test.sh_updated.png)</kbd>
-
-<kbd>![5-Переключение обратно на ветку main](img/3_05_switching_back_to_main_branch.png)</kbd>
-
-<kbd>![5-Отображение коммитов для test.sh в глобальном репозитории](img/3_04_test.sh_global_test_commits.png)</kbd>
-
-<kbd>![6-Слияние веток main и test](img/3_06_merging_main_with_test.png)</kbd>
