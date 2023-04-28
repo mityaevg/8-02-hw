@@ -91,18 +91,34 @@ pipeline {
 
 1. Установим **Nexus** на виртуальную машину.
 2. Cоздал `raw (hosted)` репозиторий **assignment3_repo** в **Nexus**.
-3. 
-4. Переключимся обратно на ветку **main**. Производим слияние веток **main** и **test**.
-
-#### Ссылка на graph коммитов [**assignment**](https://github.com/mityaevg/assignment/network)
-
+3. Изменил пайплайн, чтобы собирался бинарный **go-file**:
 ```
-sudo docker run -d -p 192.168.1.121:8081:8081 -p 192.168.1.121:8082:8082 --name nexus -e INSTALL4J_ADD_VM_PARAMS="-Xms512m -Xmx512m -XX:MaxDirectMemorySize=273m" sonatype/nexus3
-sudo docker exec -t nexus bash -c 'cat /nexus-data/admin.password && echo'
-sudo docker container restart 11879005e34f
+stage('Build') {
+   steps {
+    sh 'CGO_ENABLED=0 GOOS=linux /usr/local/go/bin/go build -a -installsuffix cgo -o ~/app .'
+   }
+  }
 ```
+4. Добавил в пайплайн этап для загрузки бинарного файла в мой репозиторий **Nexus** на ВМ - **192.168.1.121**:
+```
+stage('Push') {
+   steps {
+    sh 'curl -u "admin:Convatec10102" http://192.168.1.121:8081/repository/assignment3_repo/ --upload-file ~/app'
+   }
+  }
+```
+Настройки проекта **assignment3** и результаты выполнения сборки:
 
 <kbd>![1-Nexus веб-интерфейс](img/8-02_3_nexus_web_interface.png)</kbd>
 
 <kbd>![2-Создание репозитория assignment3_repo](img/8-02_3_raw_hosted_repo.png)</kbd>
 
+<kbd>![3-Настройки assignment3](img/8-02_3_pipeline_config1.png)</kbd>
+
+<kbd>![4-Настройки assignment3](img/8-02_3_pipeline_config2.png)</kbd>
+
+<kbd>![5-Результаты сборки](img/8-02_3_build_results.png)</kbd>
+
+<kbd>![6-Содержимое репозитория Nexus](img/8-02_3_nexus_repository.png)</kbd>
+
+<kbd>![7-Содержимое репозитория Nexus](img/8-02_3_nexus_repository1.png)</kbd>
